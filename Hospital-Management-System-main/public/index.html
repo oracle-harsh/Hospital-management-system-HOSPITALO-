@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/images/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Hospitalo is a web application that helps patients to find the best hospital for their needs. It also helps hospitals to manage their patients and their appointments. It is a project developed by students of the New Government Polytechnic, Patna-13 for their final year project. It is developed using ReactJS, NodeJS, ExpressJS, MongoDB, and TailwindCSS. It is open source and free to use. It is developed by Aryan Kumar, Aditya Singh, Roushan Kr Jha, Satyam Singh, and Harsh. It is developed under the guidance of Dr. Shakti Nath Singh, HOD, Computer Science Department, NGP, Patna-13."
+    />
+    <meta
+      name="keywords"
+      content="Hospitalo, Hospitalo Patna, Hospitalo Bihar, Hospitalo India, Hospitalo Web App, Hospitalo Web Application, Hospitalo Web Application Patna, Hospitalo Web Application Bihar, Hospitalo Web Application India, Hospitalo Web App Patna, Hospitalo Web App Bihar, Hospitalo Web App India, Hospitalo Web App Patna Bihar India, Hospitalo Web Application Patna Bihar India, Hospitalo Web Application Patna India, Hospitalo Web Application Bihar India, Hospitalo Web App Patna India, Hospitalo Web App Bihar India, Hospitalo Web App Patna Bihar India, Hospitalo Web Application Patna Bihar India, Hospitalo Web Application Patna India, Hospitalo Web Application Bihar India, Hospitalo Web App Patna India, Hospitalo Web App Bihar India, Hospitalo Web App Patna Bihar India"
+    />
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Hospitalo" />
+    <meta
+      name="description"
+      content="Hospitalo is a web application that helps patients to find the best hospital for their needs. It also helps hospitals to manage their patients and their appointments. It is a project developed by students of the New Government Polytechnic, Patna-13 for their final year project. It is developed using ReactJS, NodeJS, ExpressJS, MongoDB, and TailwindCSS. It is open source and free to use. It is developed by Aryan Kumar, Aditya Singh, Roushan Kr Jha, Satyam Singh, and Harsh. It is developed under the guidance of Dr. Shakti Nath Singh, HOD, Computer Science Department, NGP, Patna-13."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hospitalo.vercel.app/" />
+    <meta property="og:title" content="Hospitalo" />
+    <meta
+      property="og:description"
+      content="Hospitalo is a web application that helps patients to find the best hospital for their needs. It also helps hospitals to manage their patients and their appointments. It is a project developed by students of the New Government Polytechnic, Patna-13 for their final year project. It is developed using ReactJS, NodeJS, ExpressJS, MongoDB, and TailwindCSS. It is open source and free to use. It is developed by Aryan Kumar, Aditya Singh, Roushan Kr Jha, Satyam Singh, and Harsh. It is developed under the guidance of Dr. Shakti Nath Singh, HOD, Computer Science Department, NGP, Patna-13."
+    />
+    <meta property="og:image" content="%PUBLIC_URL%/images/logo.svg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://hospitalo.vercel.app/" />
+    <meta property="twitter:title" content="Hospitalo" />
+    <meta
+      property="twitter:description"
+      content="Hospitalo is a web application that helps patients to find the best hospital for their needs. It also helps hospitals to manage their patients and their appointments. It is a project developed by students of the New Government Polytechnic, Patna-13 for their final year project. It is developed using ReactJS, NodeJS, ExpressJS, MongoDB, and TailwindCSS. It is open source and free to use. It is developed by Aryan Kumar, Aditya Singh, Roushan Kr Jha, Satyam Singh, and Harsh. It is developed under the guidance of Dr. Shakti Nath Singh, HOD, Computer Science Department, NGP, Patna-13."
+    />
+    <meta property="twitter:image" content="%PUBLIC_URL%/images/logo.svg" />
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/logo.svg" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>Hospitalo</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+      }
+
+      body {
+        background-color: #fff;
+        overflow-x: hidden;
+      }
+
+      .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .loader__container {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .loader__container__item {
+        width: 20px;
+        height: 20px;
+        background-color: #000;
+        border-radius: 50%;
+        animation: loader 0.5s linear infinite alternate;
+      }
+
+      @keyframes loader {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0.5);
+        }
+      }
+
+      .disppear {
+        animation: disppear 1s linear forwards;
+      }
+
+      @keyframes disppear {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      /*(
+        window.location.href.includes("hospitalo.vercel.app") ||
+        window.location.href.includes("hospitalo.herokuapp.com")
+      ) {
+        window.location.href = "https://hospitalo.netlify.app";
+      } */
+    </script>
+
+    <noscript> You need to enable JavaScript to run this app. </noscript>
+
+    <div id="root">
+      <div class="loader">
+        <div class="loader__container">
+          <div class="loader__container__item"></div>
+          <div class="loader__container__item"></div>
+          <div class="loader__container__item"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var loader = document.querySelector(".loader");
+      window.addEventListener("load", vanish);
+
+      function vanish() {
+        loader.classList.add("disppear");
+      }
+
+      var root = document.getElementById("root");
+
+      setTimeout(() => {
+        root.classList.remove("disppear");
+      }, 4000);
+
+      setTimeout(() => {
+        root.style.display = "block";
+      }, 4000);
+
+      setTimeout(() => {
+        root.classList.add("disppear");
+      }, 5000);
+
+      setTimeout(() => {
+        root.style.display = "none";
+      }, 6000);
+
+      setTimeout(() => {
+        root.classList.remove("disppear");
+      }, 6000);
+
+      setTimeout(() => {
+        root.style.display = "block";
+      }, 6000);
+    </script>
+
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
